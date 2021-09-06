@@ -80,7 +80,7 @@ We can get the solution:
 The solution x is the amount we need to borrow from Pair0.
 
 ## Deploy the contract
-1. Edit network config in `hardhat.config.ts`.(Currently it is BSC in the repo, you alse can use Ethereum mainnet)
+1. Edit network config in `hardhat.config.ts`.(Currently it is BSC in the repo, you also can use Ethereum mainnet)
 
 2. Copy the secret sample config：
 
@@ -95,7 +95,7 @@ $ cp .secret.ts.sample .secret.ts
 
 
 ```bash
-$ hardhart --network XXX run scripts/deploy.ts
+$ hardhat --network XXX run scripts/deploy.ts
 
 ```
 

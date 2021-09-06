@@ -9,9 +9,41 @@ import log from './log';
 
 export enum Network {
   BSC = 'bsc',
+  Harmony = 'harmony'
 }
 
 const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';
+
+
+const harmonyBaseTokens: Tokens = {
+  wone: { symbol: 'WONE', address: '0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a' },
+  usdc: { symbol: 'USDC', address: '0x985458E523dB3d53125813eD68c274899e9DfAb4' },
+  usdt: { symbol: 'USDT', address: '0x3C2B8Be99c50593081EAA2A724F0B8285F5aba8f' },
+  busd: { symbol: 'BUSD', address: '0xE176EBE47d621b984a73036B9DA5d834411ef734' },
+};
+
+const harmonyQuoteTokens: Tokens = {
+  eth: { symbol: '1ETH', address: '0x6983D1E6DEf3690C4d616b13597A09e6193EA013' },
+  btc: { symbol: '1BTC', address: '0x3095c7557bCb296ccc6e363DE01b760bA031F2d9' },
+  viper: { symbol: 'VIPER', address: '0xEa589E93Ff18b1a1F1e9BaC7EF3E86Ab62addc79' },
+  link: { symbol: 'LINK', address: '0x218532a12a389a4a92fC0C5Fb22901D1c19198aA' },
+  wise: { symbol: '1WISE', address: '0xE7e3C4D1cFc722b45A428736845B6AfF862842a1' },
+  dsla: { symbol: '1DSLA', address: '0x34704c70e9eC9fB9A921da6DAAD7D3e19f43c734' },
+  aave: { symbol: '1AAVE', address: '0xcF323Aad9E522B93F11c352CaA519Ad0E14eB40F' },
+  sushi: { symbol: '1SUSHI', address: '0xBEC775Cb42AbFa4288dE81F387a9b1A3c4Bc552A' },
+  mochi: { symbol: 'HMOCHI', address: '0x0dD740Db89B9fDA3Baadf7396DdAD702b6E8D6f5' },
+  xya: { symbol: 'XYA', address: '0x9b68BF4bF89c115c721105eaf6BD5164aFcc51E4' },
+  jenn: { symbol: 'JENN', address: '0x2F459Dd7CBcC9D8323621f6Fb430Cd0555411E7B' }
+};
+
+const harmonyDexes: AmmFactories = {
+  viper: '0x7d02c116b98d0965ba7b642ace0183ad8b8d2196',
+  sonic: '0x653fb617210ca72dc938f8f4c75738f2b4b88d7b',
+  jewel: '0x9014b937069918bd319f80e8b3bb4a2cf6faa5f7',
+  loot: '0x021aef70c404aa9d70b71c615f17ab3a4038851a',
+  // value: '0x1B8E12F839BD4e73A47adDF76cF7F0097d74c14C',
+};
+
 
 const bscBaseTokens: Tokens = {
   wbnb: { symbol: 'WBNB', address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c' },
@@ -87,6 +119,8 @@ const bscDexes: AmmFactories = {
 
 function getFactories(network: Network): AmmFactories {
   switch (network) {
+    case Network.Harmony:
+      return harmonyDexes;
     case Network.BSC:
       return bscDexes;
     default:
@@ -98,6 +132,8 @@ export function getTokens(network: Network): [Tokens, Tokens] {
   switch (network) {
     case Network.BSC:
       return [bscBaseTokens, bscQuoteTokens];
+      case Network.Harmony:
+        return [harmonyBaseTokens, harmonyQuoteTokens];
     default:
       throw new Error(`Unsupported network:${network}`);
   }
@@ -114,7 +150,9 @@ async function updatePairs(network: Network): Promise<ArbitragePair[]> {
   log.info(`Fetch from dexes: ${Object.keys(factoryAddrs)}`);
   for (const key in factoryAddrs) {
     const addr = factoryAddrs[key];
+    console.log(addr);
     const factory = new ethers.Contract(addr, factoryAbi, ethers.provider);
+    console.log(factory);
     factories.push(factory);
   }
 
@@ -128,6 +166,7 @@ async function updatePairs(network: Network): Promise<ArbitragePair[]> {
         const pair = await factory.getPair(baseToken.address, quoteToken.address);
         if (pair != ZERO_ADDRESS) {
           tokenPair.pairs.push(pair);
+          console.log(pair);
         }
       }
       if (tokenPair.pairs.length >= 2) {

@@ -1,0 +1,156 @@
+[
+  {
+    "symbols": "1ETH-WONE",
+    "pairs": [
+      "0x1E77990977bd723f4BfaEFeA68BF372462683fA2",
+      "0x0f239D683fad9c1404EB1F9820f8c1D403328aD1"
+    ]
+  },
+  {
+    "symbols": "1ETH-WONE",
+    "pairs": [
+      "0x1E77990977bd723f4BfaEFeA68BF372462683fA2",
+      "0x864fcd9a42a5f6e0f76BC309Ee26c8fab473FC3e"
+    ]
+  },
+  {
+    "symbols": "1ETH-WONE",
+    "pairs": [
+      "0x1E77990977bd723f4BfaEFeA68BF372462683fA2",
+      "0xd08F349774bcd447599AABDC72DF2a34145b7Ff9"
+    ]
+  },
+  {
+    "symbols": "1ETH-WONE",
+    "pairs": [
+      "0x0f239D683fad9c1404EB1F9820f8c1D403328aD1",
+      "0x864fcd9a42a5f6e0f76BC309Ee26c8fab473FC3e"
+    ]
+  },
+  {
+    "symbols": "1ETH-WONE",
+    "pairs": [
+      "0x0f239D683fad9c1404EB1F9820f8c1D403328aD1",
+      "0xd08F349774bcd447599AABDC72DF2a34145b7Ff9"
+    ]
+  },
+  {
+    "symbols": "1ETH-WONE",
+    "pairs": [
+      "0x864fcd9a42a5f6e0f76BC309Ee26c8fab473FC3e",
+      "0xd08F349774bcd447599AABDC72DF2a34145b7Ff9"
+    ]
+  },
+  {
+    "symbols": "1BTC-WONE",
+    "pairs": [
+      "0x243130D5a9BF54fE661ADCA850C481682Dd502E6",
+      "0xA8455021989Ce3530118E0d6229219Cc9bBCCA2b"
+    ]
+  },
+  {
+    "symbols": "VIPER-WONE",
+    "pairs": [
+      "0x96025483BD32C645B822a5a08004b84D674537CB",
+      "0x4111035302C97Bc5ce93Ca31aA8a3aD40b0217C5"
+    ]
+  },
+  {
+    "symbols": "VIPER-WONE",
+    "pairs": [
+      "0x96025483BD32C645B822a5a08004b84D674537CB",
+      "0x7C9A834C1aD436F611c0785F10EfF23BC77346dD"
+    ]
+  },
+  {
+    "symbols": "VIPER-WONE",
+    "pairs": [
+      "0x96025483BD32C645B822a5a08004b84D674537CB",
+      "0x8B669422300cc405c0dD45A571BeC2c169319D4C"
+    ]
+  },
+  {
+    "symbols": "VIPER-WONE",
+    "pairs": [
+      "0x4111035302C97Bc5ce93Ca31aA8a3aD40b0217C5",
+      "0x7C9A834C1aD436F611c0785F10EfF23BC77346dD"
+    ]
+  },
+  {
+    "symbols": "VIPER-WONE",
+    "pairs": [
+      "0x4111035302C97Bc5ce93Ca31aA8a3aD40b0217C5",
+      "0x8B669422300cc405c0dD45A571BeC2c169319D4C"
+    ]
+  },
+  {
+    "symbols": "VIPER-WONE",
+    "pairs": [
+      "0x7C9A834C1aD436F611c0785F10EfF23BC77346dD",
+      "0x8B669422300cc405c0dD45A571BeC2c169319D4C"
+    ]
+  },
+  {
+    "symbols": "1DSLA-WONE",
+    "pairs": [
+      "0x01175Bb23a7de1Aa6871D3BE64564d7Bc37cB509",
+      "0xDd892B97FC78c0BCDC944156DCBB42BC63760B75"
+    ]
+  },
+  {
+    "symbols": "HMOCHI-WONE",
+    "pairs": [
+      "0x7Cb796ab46f5A10f181F9bA7dC5215E989ef6F49",
+      "0xb47b1eC4303445D38E637Eb0b15bbeb644d79E27"
+    ]
+  },
+  {
+    "symbols": "HMOCHI-WONE",
+    "pairs": [
+      "0x7Cb796ab46f5A10f181F9bA7dC5215E989ef6F49",
+      "0x52fc5933EA25A1Ef40465C26cdd1434FE08a3840"
+    ]
+  },
+  {
+    "symbols": "HMOCHI-WONE",
+    "pairs": [
+      "0xb47b1eC4303445D38E637Eb0b15bbeb644d79E27",
+      "0x52fc5933EA25A1Ef40465C26cdd1434FE08a3840"
+    ]
+  },
+  {
+    "symbols": "XYA-WONE",
+    "pairs": [
+      "0x1485a496F816F940c510d634E48F8C66B78DC99E",
+      "0xc74eaf04777F784A7854e8950daEb27559111b85"
+    ]
+  },
+  {
+    "symbols": "XYA-WONE",
+    "pairs": [
+      "0x1485a496F816F940c510d634E48F8C66B78DC99E",
+      "0xfacdDDf6F59ABee55F19f47698356d9de036E871"
+    ]
+  },
+  {
+    "symbols": "XYA-WONE",
+    "pairs": [
+      "0xc74eaf04777F784A7854e8950daEb27559111b85",
+      "0xfacdDDf6F59ABee55F19f47698356d9de036E871"
+    ]
+  },
+  {
+    "symbols": "JENN-WONE",
+    "pairs": [
+      "0x0Ea67CfE61d2847e1B14a374a884A35529267818",
+      "0xe2B83018848352fcc45B377CEde6a51EF484396C"
+    ]
+  },
+  {
+    "symbols": "VIPER-BUSD",
+    "pairs": [
+      "0x8Dc5549e4c7B71652664468f7086Ccae0171F31d",
+      "0x2685E2df7FA8b3f539Ef0D6e4601eB1F59F8392c"
+    ]
+  }
+]

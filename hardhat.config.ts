@@ -7,6 +7,8 @@ import deployer from './.secret';
 // const BSC_RPC = 'https://bsc-dataseed.binance.org/';
 const BSC_RPC = 'https://bsc-dataseed1.defibit.io/';
 const BSC_Tetsnet_RPC = 'https://data-seed-prebsc-1-s1.binance.org:8545/';
+const Harmony_RPC = 'https://api.s0.t.hmny.io/';
+
 
 const config: HardhatUserConfig = {
   solidity: { version: '0.7.6' },
@@ -14,7 +16,7 @@ const config: HardhatUserConfig = {
     hardhat: {
       // loggingEnabled: true,
       forking: {
-        url: BSC_RPC,
+        url: Harmony_RPC,
         enabled: true,
       },
       accounts: {
@@ -29,6 +31,11 @@ const config: HardhatUserConfig = {
     bsc: {
       url: BSC_RPC,
       chainId: 0x38,
+      accounts: [deployer.private],
+    },
+    harmony: {
+      url: Harmony_RPC,
+      chainId: 1666600000,
       accounts: [deployer.private],
     },
   },

@@ -36,8 +36,12 @@ function arbitrageFunc(flashBot: FlashBot, baseTokens: Tokens) {
     };
     try {
       res = await flashBot.getProfit(pair0, pair1);
+      console.log(res);
+
       log.debug(`Profit on ${pair.symbols}: ${ethers.utils.formatEther(res.profit)}`);
     } catch (err) {
+      console.log(err);
+
       log.debug(err);
       return;
     }
@@ -60,9 +64,6 @@ function arbitrageFunc(flashBot: FlashBot, baseTokens: Tokens) {
           log.info(`Tx: ${receipt.transactionHash}`);
         });
       } catch (err) {
-        if (err.message === 'Too much pending tasks' || err.message === 'async-lock timed out') {
-          return;
-        }
         log.error(err);
       }
     }
@@ -70,9 +71,10 @@ function arbitrageFunc(flashBot: FlashBot, baseTokens: Tokens) {
 }
 
 async function main() {
-  const pairs = await tryLoadPairs(Network.BSC);
+  const pairs = await tryLoadPairs(Network.Harmony);
+  console.log(pairs);
   const flashBot = (await ethers.getContractAt('FlashBot', config.contractAddr)) as FlashBot;
-  const [baseTokens] = getTokens(Network.BSC);
+  const [baseTokens] = getTokens(Network.Harmony);
 
   log.info('Start arbitraging');
   while (true) {
